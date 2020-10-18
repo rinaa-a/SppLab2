@@ -6,7 +6,11 @@ namespace Lab4Spp
     {
         static void Main(string[] args)
         {
-            
+            var faker = new Faker();
+            Foo foo = faker.Create<Foo>();
+            Bar bar = faker.Create<Bar>();
+            Console.WriteLine(foo.num);
+            Console.ReadLine();
         }
     }
 }
