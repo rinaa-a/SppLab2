@@ -28,26 +28,26 @@ namespace Lab4Spp
                 return null;
             }
 
-            //if (typeof(IEnumerable).IsAssignableFrom(type))
-            //{
-            //    if (type.GetGenericTypeDefinition() == typeof(List<>))
-            //    {
-            //        var listType = type.GetGenericTypeDefinition();
-            //        var genericType = type.GetGenericArguments()[0];
-            //        var constructedList = listType.MakeGenericType(genericType);
-            //        var random = new Random();
-            //        byte length = (byte)random.Next();
-            //        object[] parameters = { length };
-            //        var instance = Activator.CreateInstance(constructedList, parameters);
-            //        for (int i = 0; i < length; i++)
-            //        {
-            //            instance.GetType().GetMethod("Add")
-            //                .Invoke(instance, new[] { Generate(genericType) });
-            //        }
+            if (typeof(IEnumerable).IsAssignableFrom(type))
+            {
+                if (type.GetGenericTypeDefinition() == typeof(List<>))
+                {
+                    var listType = type.GetGenericTypeDefinition();
+                    var genericType = type.GetGenericArguments()[0];
+                    var constructedList = listType.MakeGenericType(genericType);
+                    var random = new Random();
+                    byte length = (byte)random.Next(1, 16);
+                    object[] parameters = { length };
+                    var instance = Activator.CreateInstance(constructedList, parameters);
+                    for (int i = 0; i < length; i++)
+                    {
+                        instance.GetType().GetMethod("Add")
+                            .Invoke(instance, new[] { Generate(genericType) });
+                    }
 
-            //        return instance;
-            //    }
-            //}
+                    return instance;
+                }
+            }
 
             return null;
         }

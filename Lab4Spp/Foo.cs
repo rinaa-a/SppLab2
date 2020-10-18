@@ -11,6 +11,8 @@ namespace Lab4Spp
         public string str;
         public List<int> list;
         public Bar bar;
+        public List<int> values;
+        public List<Bar> objects;
         public DateTime Date { get; set; }
 
         public Foo(int num, string str)
