@@ -18,7 +18,8 @@ namespace Lab2Spp
         {
             string[] pluginPaths =
             {
-                @"BasicValueTypesGenerator\bin\Debug\netstandard2.0\BasicValueTypesGenerator.dll"
+                @"BasicValueTypesGenerator\bin\Debug\netstandard2.0\BasicValueTypesGenerator.dll",
+                @"StringGenerator\bin\Debug\netcoreapp3.1\StringGenerator.dll"
             };
 
             generators = pluginPaths.SelectMany(path =>

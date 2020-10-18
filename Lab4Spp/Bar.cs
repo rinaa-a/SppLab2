@@ -9,6 +9,7 @@ namespace Lab4Spp
     {
         public int num;
         public double x;
+        public string str;
         public Foo foo;
         private Bar()
         {
