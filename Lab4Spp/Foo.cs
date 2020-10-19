@@ -5,7 +5,7 @@ using System.Text;
 namespace Lab4Spp
 {
     [DTO]
-    class Foo
+    public class Foo
     {
         public int num;
         public string str;

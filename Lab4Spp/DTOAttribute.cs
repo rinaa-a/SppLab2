@@ -5,7 +5,7 @@ using System.Text;
 namespace Lab4Spp
 {
     [AttributeUsage(AttributeTargets.Class)]
-    class DTOAttribute : Attribute
+    public class DTOAttribute : Attribute
     {
     }
 }

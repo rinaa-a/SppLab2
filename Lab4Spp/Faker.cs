@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Lab4Spp
 {
-    class Faker
+    public class Faker
     {
         private Stack<Type> progressStack = new Stack<Type>();
         private Generator generator = new Generator();
